@@ -2,7 +2,13 @@ const container = document.querySelector(".container");
 const images = [
   { name: "Alas", image: "img/alas1.jpg" },
   { name: "Hamburguesa", image: "img/hamburguesa1.jpg" },
-  { name: "Jugo", image: "img/jugos1.jpg" }
+  { name: "Jugo", image: "img/jugos1.jpg" },
+  { name: "Tacos", image: "img/tacos1.jpg" },
+  { name: "Batidos", image: "img/batidos1.jpg" },
+  { name: "Cerveza", image: "img/cerveza1.jpg" },
+  { name: "Coctel", image: "img/coctel1.jpg" },
+  { name: "Hamburguesa", image: "img/hamburguesa2.jpg" },
+  { name: "Salchipapa", image: "img/salchi1.jpg" },
 ];
 
 const showImages = () => {
@@ -26,7 +32,7 @@ const showImages = () => {
     window.addEventListener("load", function() {
       navigator.serviceWorker
         .register("./serviceWorker.js")
-        .then(res => console.log("service worker registered"))
-        .catch(err => console.log("service worker not registered", err));
+        .then(res => console.log("service worker registrado"))
+        .catch(err => console.log("service worker no registrado", err));
     });
   }
