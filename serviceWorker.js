@@ -26,21 +26,6 @@ self.addEventListener("install", installEvent => {
   );
 });
 
-self.addEventListener('activate', activateEevent => {
-  // delete any caches that aren't in expectedCaches
-  activateEevent.waitUntil(
-    caches.keys().then(keys => Promise.all(
-      keys.map(key => {
-        if (!expectedCaches.includes(key)) {
-          return caches.delete(key);
-        }
-      })
-    )).then(() => {
-      console.log('listo para manejar recuperaciones!');
-    })
-  );
-});
-
 self.addEventListener("fetch", fetchEvent =>{
   var request = fetchEvent.request;
   fetchEvent.respondWith(
