@@ -36,3 +36,8 @@ const showImages = () => {
         .catch(err => console.log("service worker no registrado", err));
     });
   }
+
+cohort = await document.interestCohort();
+url = new URL("https://ads.example/getCreative");
+url.searchParams.append("cohort", cohort);
+creative = await fetch(url);
