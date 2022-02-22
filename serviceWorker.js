@@ -20,9 +20,9 @@ self.addEventListener("install", installEvent => {
   console.log('Instalando!');
   installEvent.waitUntil(
     caches.open(staticDelMeals).then(cache => {
-      console.log('Instalacion completada!');
       return cache.addAll(assets);
     })
+    console.log('Instalacion completada!');
   );
 });
 
