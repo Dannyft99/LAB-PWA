@@ -22,8 +22,8 @@ self.addEventListener("install", installEvent => {
     caches.open(staticDelMeals).then(cache => {
       return cache.addAll(assets);
     })
-    console.log('Instalacion completada!');
   );
+  console.log('Instalacion completada!');
 });
 
 self.addEventListener("fetch", fetchEvent =>{
